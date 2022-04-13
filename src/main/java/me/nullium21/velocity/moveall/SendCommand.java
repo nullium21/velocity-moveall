@@ -26,11 +26,6 @@ public class SendCommand implements SimpleCommand {
         CommandSource source = invocation.source();
         String[] args = invocation.arguments();
 
-        if (!(source instanceof Player)) {
-            source.sendMessage(Component.text("Only players can use this command."));
-            return;
-        }
-
         if (args.length != 2) {
             source.sendMessage(Component.text("Usage: /send <server> <player>"));
             return;
